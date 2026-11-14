@@ -1,0 +1,254 @@
+{
+  "source": "https://github.com/semgrep/semgrep.git",
+  "commit": "06d9993409f6698f78f6956cd39d968e7f4d7b6a",
+  "number_of_original_workflow_files": 41,
+  "original_ci_is_disabled": true,
+  "files": [
+    {
+      "upstream_path": ".github/workflows/.codemapignore",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/.codemapignore",
+      "git_blob": "235fe5aeeb630e184bf1581ee1de04c1b1d9de6f",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/Makefile",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/Makefile",
+      "git_blob": "454af2df739bf7b1ed4602ec64bef86bf7a6a83f",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/README.md",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/README.md",
+      "git_blob": "6c904bf6c964e1fc2e0f469908137df738dc8b34",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-core-x86.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-core-x86.jsonnet",
+      "git_blob": "f31598353e38d9f1b39abef760435fea59023a89",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-core-x86.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-core-x86.yml",
+      "git_blob": "bb6b111a9dd5a16f199cd26d7241f1cb4c118902",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-docker.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-docker.jsonnet",
+      "git_blob": "2114b2cf11ae373c0a53aa23437905b678d76df7",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-docker.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-docker.yml",
+      "git_blob": "3fc5cfff2864b94a0d816d1c1b0b235784cd3805",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-osx-arm64.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-osx-arm64.jsonnet",
+      "git_blob": "3ce9fc289a6764f0f2859d098660cf103cb3f68a",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/build-test-osx-arm64.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/build-test-osx-arm64.yml",
+      "git_blob": "fd9fe0f753035520eeb9439468c0cf1b94243076",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/actions.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/actions.libsonnet",
+      "git_blob": "6f7e55cfdd31eb98d1b0463d4ca1a07f76b08c87",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/bump-uses.py",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/bump-uses.py",
+      "git_blob": "3a6d94adcf7b63f90dad00ec6b57003a586df5be",
+      "original_mode": "100755"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/docker.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/docker.libsonnet",
+      "git_blob": "480caa538d40ea1ef27268ab0bd355d9486ebde9",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/gha.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/gha.libsonnet",
+      "git_blob": "1ce012c11b4bf52fcf265640086304c65ca84e02",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/semgrep.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/semgrep.libsonnet",
+      "git_blob": "dad4030fc8345a7641404469b26421a7fff22ce0",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/uses.json",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/uses.json",
+      "git_blob": "48fdba3a92ebeb76db6f13a7a8ce429be47ed930",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/uses.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/uses.libsonnet",
+      "git_blob": "21720bafc76204aed501480d20858c1a19473850",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/useslockfile.json",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/useslockfile.json",
+      "git_blob": "b5bf27c5dae6c6291705a7c88bc5aaf286f44cb9",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/util.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/util.libsonnet",
+      "git_blob": "bf55512e40806c213a7dea2878219c18487f4dd3",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/libs/windows.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/libs/windows.libsonnet",
+      "git_blob": "ee86010b34c524b3b4aaf40a0e61ffd8550d166c",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/lint.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/lint.jsonnet",
+      "git_blob": "c9517f963a59cc6b35a269406b40e3f2088fa0cd",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/lint.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/lint.yml",
+      "git_blob": "f2a9fdccf43a197a36f21e1a38eae4cbb098282c",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/nightly.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/nightly.jsonnet",
+      "git_blob": "a4c80a83287d8b8af7a0191779883dd87211efd7",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/nightly.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/nightly.yml",
+      "git_blob": "12965a85511074234d47d8461fd019c5ff90592d",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/ocaml-tree-sitter-ci.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/ocaml-tree-sitter-ci.jsonnet",
+      "git_blob": "c17259cb66aa655dbee004acbae4c332215c3854",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/ocaml-tree-sitter-ci.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/ocaml-tree-sitter-ci.yml",
+      "git_blob": "bb04a63f09f9565359a0805296db87098ab5ed00",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/ocaml-tree-sitter-test-languages.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/ocaml-tree-sitter-test-languages.jsonnet",
+      "git_blob": "021175165c5628787f877817e709e0c22fb6efc2",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/ocaml-tree-sitter-test-languages.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/ocaml-tree-sitter-test-languages.yml",
+      "git_blob": "bfe88a325100628cfe1214c420fcce59607b71c4",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/ocaml-tree-sitter.libsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/ocaml-tree-sitter.libsonnet",
+      "git_blob": "2aa9c028e62ac28d98482e1e2cc1ca4a9466b9d0",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/pr-checklist.yaml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/pr-checklist.yaml",
+      "git_blob": "5a7e2c5dc894545bd917d279995730cf26f64524",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/scanner-memory-safety.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/scanner-memory-safety.jsonnet",
+      "git_blob": "b1124e052944aba63448ceebef7d43a6b61f5ff7",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/scanner-memory-safety.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/scanner-memory-safety.yml",
+      "git_blob": "929dc3e33b1868c2c0ab834e7aa4000cb9a5b26b",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/sync-with-PRO.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/sync-with-PRO.jsonnet",
+      "git_blob": "ea7fb2d5acb574b3776d93720cc1392ae27a9f2a",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/sync-with-PRO.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/sync-with-PRO.yml",
+      "git_blob": "b6c59825a4b0bf546b52078e9e5ceff1283df600",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/test-e2e-semgrep-ci.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/test-e2e-semgrep-ci.jsonnet",
+      "git_blob": "2a1377b22fa889250f88b805c22dfdd30c821167",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/test-e2e-semgrep-ci.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/test-e2e-semgrep-ci.yml",
+      "git_blob": "79afcc752ca4ffbcade92be8ba33b09e8ac572ed",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/tests.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/tests.jsonnet",
+      "git_blob": "2ee536390f889fd97a1856365fa502241f98d88d",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/tests.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/tests.yml",
+      "git_blob": "3b1786c78ff67501b435677f1e966109d8d52d55",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/tests/grammar-test-paths.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/tests/grammar-test-paths.jsonnet",
+      "git_blob": "56f08823305512f7fce2fc533b642ecbfd335918",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/tests/opam-cache.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/tests/opam-cache.jsonnet",
+      "git_blob": "e3dbefcd9196d7e93bad89b4b4a547bdd0ae6c09",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/trigger-semgrep-comparison-argo.jsonnet",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/trigger-semgrep-comparison-argo.jsonnet",
+      "git_blob": "b576ad79360cf7d9e886896cd0e28d9bf3411ede",
+      "original_mode": "100644"
+    },
+    {
+      "upstream_path": ".github/workflows/trigger-semgrep-comparison-argo.yml",
+      "reference_path": "upstream-workflow-snapshots/semgrep/.github/workflows/trigger-semgrep-comparison-argo.yml",
+      "git_blob": "9337479da0edb7c2f68f150efb5994659816763c",
+      "original_mode": "100644"
+    }
+  ]
+}
