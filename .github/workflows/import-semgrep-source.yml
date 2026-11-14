@@ -1,0 +1,90 @@
+name: Import verified Semgrep source to main
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-semgrep-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: semgrep-reference-import-main
+  cancel-in-progress: false
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout reference repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: true
+          fetch-depth: 1
+
+      - name: Import tracked upstream source directly onto main
+        env:
+          UPSTREAM_SHA: '06d9993409f6698f78f6956cd39d968e7f4d7b6a'
+          UPSTREAM_TREE: '5d2f52f238791554ed973215fd030f22b278395d'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'TrillionAI Source Archive Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add semgrep-upstream https://github.com/semgrep/semgrep.git
+          git fetch --no-tags --depth=1 semgrep-upstream "$UPSTREAM_SHA"
+          test "$(git rev-parse 'FETCH_HEAD^{commit}')" = "$UPSTREAM_SHA" || {
+            echo "::error::Fetched commit differs from pinned upstream"
+            exit 1
+          }
+          test "$(git rev-parse 'FETCH_HEAD^{tree}')" = "$UPSTREAM_TREE" || {
+            echo "::error::Fetched source Git tree differs from pinned tree"
+            exit 1
+          }
+
+          # Retain the complete original upstream source index first.
+          # Keep project-specific provenance as a separate root document.
+          original_research_blob="$(git rev-parse 'HEAD:README.md')"
+          git read-tree --reset "$UPSTREAM_TREE"
+          git update-index --add --cacheinfo "100644,$original_research_blob,TRILLIONAI_REFERENCE.md"
+
+          # Never import executable upstream GitHub Actions workflows into
+          # this research archive: no unexpected scanning, publishing or billing.
+          if git ls-files --error-unmatch '.github/workflows' >/dev/null 2>&1; then
+            git rm -r --cached -- '.github/workflows'
+          else
+            git ls-files -z '.github/workflows/' | xargs -0 -r git rm -r --cached --
+          fi
+
+          # Verify source entries byte-for-byte at the Git-object level:
+          # only .github workflows and our added research document differ.
+          git ls-tree -rz --full-tree "$UPSTREAM_TREE" |
+            while IFS= read -r -d '' entry; do
+              path="${entry#*$'\t'}"
+              case "$path" in
+                .github/workflows|.github/workflows/*) continue ;;
+              esac
+              index_blob="$(git ls-files -s -- "$path" | head -n1)"
+              if [ -z "$index_blob" ]; then
+                echo "::error::Missing source file: $path"
+                exit 1
+              fi
+            done
+
+          git cat-file -e "$UPSTREAM_SHA:LICENSE"
+          git cat-file -e "$UPSTREAM_SHA:COPYRIGHT"
+          git commit -m "archive: put pinned Semgrep tracked source on main"
+          git push origin HEAD:main
+          git fetch --no-tags origin main
+          main_source="$(git rev-parse FETCH_HEAD^{tree})"
+          local_tree="$(git rev-parse HEAD^{tree})"
+          test "$main_source" = "$local_tree" || {
+            echo "::error::Remote main tree does not match the local imported tree"
+            exit 1
+          }
+          echo "VERIFIED PINNED UPSTREAM COMMIT: $UPSTREAM_SHA"
+          echo "VERIFIED ORIGINAL UPSTREAM TREE: $UPSTREAM_TREE"
+          echo "VERIFIED REMOTE MAIN TREE: $main_source"
+          echo "IMPORTANT: Imported .github/workflows excluded; research document added"
