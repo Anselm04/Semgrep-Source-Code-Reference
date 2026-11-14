@@ -21,6 +21,15 @@ The original repository root `LICENSE` is GNU Lesser General Public License 2.1 
 
 The upstream source tree references the submodule `tests/semgrep-rules` as a Gitlink. The Gitlink is preserved as source metadata, but **its external contents are not fetched or included in this archive**. Git LFS objects, if any, are not independently downloaded.
 
+## Verified import
+
+- [Successful source import and integrity verification](https://github.com/Anselm04/Semgrep-Source-Code-Reference/actions/runs/43647604268)
+- Pinned upstream original tree: `5d2f52f238791554ed973215fd030f22b278395d`.
+- Verified main branch Git tree: `2531814f75521b5d4a2c68145842d923087e76eb`.
+- Compared 16,078 original Git tree entries against the destination; zero discrepancies outside intentional GitHub CI removal and this research document.
+- Original root licence and subdirectory copyright/licence notices remain in source.
+- The root tree differs because original upstream GitHub Actions workflows are omitted and `TRILLIONAI_REFERENCE.md` was added. This is a source archive, not a build or test certification.
+
 ## Safe import
 The [import workflow](.github/workflows/import-semgrep-source.yml) should fetch the exact source revision, import its root tree to `main`, keep this document as `TRILLIONAI_REFERENCE.md`, and exclude upstream GitHub Actions workflow definitions from the imported root to prevent unintended execution. The pinned original Git tree is compared with the fetched upstream commit, and all tracked root tree entries are compared after import except the known CI and provenance changes.
 
